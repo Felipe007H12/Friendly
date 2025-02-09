@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rede Social</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Minha Rede Social</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Notificações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <div class="container">
+                <div class="usuario">
+                    <img src="foto_de_perfil.jpg" alt="Foto de Perfil" class="foto-perfil">
+                    <div class="dados-usuario">
+                        <h3>Victor Hugo</h3>
+                        <p>Amo Programar,Ouvir Musicas, Assistir filmes, e jogar videogame.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feed">
+            <div class="container">
+                <h2>Feed de Postagens</h2>
+
+                <!-- Postagem 1 -->
+                <div class="postagem">
+                    <p>Esta é uma postagem de exemplo. Compartilhe suas ideias com todos!</p>
+                    <button class="curtir">Curtir <span class="coracao">&#10084;</span></button>
+                    
+                    <div class="comentarios">
+                        <input type="text" class="comentar-input" placeholder="Escreva um comentário...">
+                        <button class="comentar-btn">Comentar</button>
+                    </div>
+                    <ul class="comentarios-lista"></ul>
+                </div>
+
+                <!-- Postagem 2 -->
+                <div class="postagem">
+                    <p>Vamos aumentar o engajamento com este layout bem mais atraente.</p>
+                    <button class="curtir">Curtir <span class="coracao">&#10084;</span></button>
+                    
+                    <div class="comentarios">
+                        <input type="text" class="comentar-input" placeholder="Escreva um comentário...">
+                        <button class="comentar-btn">Comentar</button>
+                    </div>
+                    <ul class="comentarios-lista"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Minha Rede Social. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Div para o coração flutuante -->
+    <div class="coracao-flutuante" style="display:none;">&#10084;</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container para centralizar conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #3498db;
+    padding: 15px 0;
+    color: white;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    float: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ecf0f1;
+}
+
+/* Perfil */
+.perfil {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.perfil .usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil .foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil .dados-usuario h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+}
+
+.perfil .dados-usuario p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Feed de Postagens */
+.feed {
+    margin-top: 30px;
+}
+
+.feed h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.feed .postagem {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feed .postagem:hover {
+    transform: translateY(-5px);
+}
+
+.feed .postagem p {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+/* Botão de Curtir */
+.feed .curtir {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feed .curtir:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Coração */
+.coracao {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Efeito Coração Flutuante */
+.coracao-flutuante {
+    position: fixed;
+    font-size: 3rem;
+    color: #e74c3c;
+    animation: flutuar 2s forwards;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+@keyframes flutuar {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-150px);
+    }
+}
+
+/* Input de Comentário */
+.comentarios {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.comentarios .comentar-input {
+    width: 80%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.comentarios .comentar-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comentarios .comentar-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Lista de Comentários */
+.comentarios-lista {
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+.comentarios-lista li {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil .usuario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil .foto-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        text-align: center;
+        float: none;
+    }
+
+    header nav ul li {
+        margin: 5px 10px;
+    }
+
+    .feed .curtir {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.2rem;
+    }
+}
